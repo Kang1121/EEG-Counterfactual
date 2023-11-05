@@ -1,0 +1,18 @@
+batch_size: 32
+num_workers: 0
+use_ddp: False
+local_rank: ''
+data_path: data/BCICIV_2a_data_LR_UNIQUELABELs_Test.npz
+pretrained_model_index: 6
+
+model: ResNet18
+model_kwargs:
+    num_classes: 18
+
+counterfactuals_kwargs:
+    apply_soft_constraint: False
+    lambd: 0
+    topk:
+    temperature: 0.1
+    model_dir: ckpts/pretrained_UNIQUELABELs/
+    max_num_distractors: 20

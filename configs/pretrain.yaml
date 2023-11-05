@@ -1,0 +1,17 @@
+batch_size: 32
+num_workers: 0
+use_ddp: False
+local_rank: ''
+n_epochs: 200
+
+classes_18:
+    num_classes: 18
+    save_dir: ckpts/pretrained_UNIQUELABELs/
+    train_data_dir: data/BCICIV_2a_data_LR_UNIQUELABELs_Train.npz
+    valid_data_dir: data/BCICIV_2a_data_LR_UNIQUELABELs_Validation.npz
+classes_2:
+    num_classes: 2
+    save_dir: ckpts/pretrained_SAMELABELs/
+    train_data_dir: data/BCICIV_2a_data_LR_SAMELABELs_Train.npz
+    valid_data_dir: data/BCICIV_2a_data_LR_SAMELABELs_Validation.npz
+
